@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'spring-boot-app-service-example'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("junit:junit")
+
+    /**
+     * Oauth2 / jwt requirements
+     */
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE")
+    compile("org.springframework.security:spring-security-jwt:1.0.3.RELEASE")
+
+    /**
+     * swagger
+     */
+    compile("io.springfox:springfox-swagger2:2.2.2")
+    compile("io.springfox:springfox-swagger-ui:2.2.2")
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
