@@ -1,5 +1,7 @@
 # spring-boot-app-service-example
 
+https://travis-ci.org/michaelgruczel/spring-boot-app-service-example.svg?branch=master
+
 Source code reference for Java Magazine Article (coming soon)
 
 fake rest service on base of:
