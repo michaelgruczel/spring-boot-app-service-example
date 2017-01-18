@@ -1,6 +1,6 @@
 # spring-boot-app-service-example
 
-https://travis-ci.org/michaelgruczel/spring-boot-app-service-example.svg?branch=master
+![travis status](https://travis-ci.org/michaelgruczel/spring-boot-app-service-example.svg?branch=master)
 
 Source code reference for Java Magazine Article (coming soon)
 
